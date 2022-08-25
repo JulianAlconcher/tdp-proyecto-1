@@ -123,12 +123,6 @@ public class SimplePresentationScreen extends JFrame {
 		lblImage.setIcon(new ImageIcon(SimplePresentationScreen.class.getResource("/images/imagen.jpg")));
 		lblImage.setBounds(439, 26, 157, 154);
 		contentPane.add(lblImage);
-		
-
-		
-		
-		
-		
 	
 	}
 }
