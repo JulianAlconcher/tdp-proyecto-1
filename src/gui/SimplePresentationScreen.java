@@ -23,10 +23,9 @@ public class SimplePresentationScreen extends JFrame {
 	private JTabbedPane tabbedPane;
 	private Student studentData;
 	private JTextField textFieldLU,textFieldSurname,textFieldName,textFieldEmail,textFieldGitHub;
-	private JLabel lblImage;
+	private JLabel lblLU,lblSurname,lblName,lblEmail,lblGitHubUrl,lblDate,lblImage;
 	
 	public SimplePresentationScreen(Student studentData) {
-		setIconImage(Toolkit.getDefaultToolkit().getImage(SimplePresentationScreen.class.getResource("/images/tdp.png")));
 		this.studentData = studentData;
 		
 		contentPane = new JPanel();
@@ -36,6 +35,7 @@ public class SimplePresentationScreen extends JFrame {
 		setSize(new Dimension(615, 280));
 		setResizable(false);
 		setContentPane(contentPane);
+		setIconImage(Toolkit.getDefaultToolkit().getImage(SimplePresentationScreen.class.getResource("/images/tdp.png")));
 		
 		init();
 	}
@@ -82,29 +82,29 @@ public class SimplePresentationScreen extends JFrame {
 		tabInformation.add(textFieldGitHub);
 		textFieldGitHub.setText(studentData.getGithubURL());
 		
-		JLabel lblLU = new JLabel("LU");
+		lblLU = new JLabel("LU");
 		lblLU.setBounds(10, 13, 63, 13);
 		tabInformation.add(lblLU);
 		
-		JLabel lblSurname = new JLabel("Apellido");
+		lblSurname = new JLabel("Apellido");
 		lblSurname.setBounds(10, 42, 63, 13);
 		tabInformation.add(lblSurname);
 		
-		JLabel lblName = new JLabel("Nombre");
+		lblName = new JLabel("Nombre");
 		lblName.setBounds(10, 71, 45, 13);
 		tabInformation.add(lblName);
 		
-		JLabel lblEmail = new JLabel("E-mail");
+		lblEmail = new JLabel("E-mail");
 		lblEmail.setBounds(10, 100, 45, 13);
 		tabInformation.add(lblEmail);
 		
-		JLabel lblGitHubUrl = new JLabel("Github URL");
+		lblGitHubUrl = new JLabel("Github URL");
 		lblGitHubUrl.setBounds(10, 129, 71, 13);
 		tabInformation.add(lblGitHubUrl);
 		contentPane.add(tabbedPane);
 		
-		JLabel lblDate = new JLabel("");
-		lblDate.setBounds(5, 218, 430, 13);
+		lblDate = new JLabel("");
+		lblDate.setBounds(5, 208, 430, 25);
 		contentPane.add(lblDate);
 	
 		
@@ -119,6 +119,7 @@ public class SimplePresentationScreen extends JFrame {
 		
 		lblDate.setText("Esta ventana fue generada el " + day + "/" + month + "/" + year + " a las: " +  hours  + ":"+ minutes +":"+seconds );
 		
+		//Add image
 		lblImage = new JLabel("");
 		lblImage.setIcon(new ImageIcon(SimplePresentationScreen.class.getResource("/images/imagen.jpg")));
 		lblImage.setBounds(439, 26, 157, 154);
