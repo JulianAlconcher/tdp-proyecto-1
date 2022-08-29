@@ -3,6 +3,7 @@ import javax.swing.JFrame;
 
 
 import java.awt.Dimension;
+import java.awt.Image;
 import java.time.LocalDateTime;
 
 import javax.swing.JPanel;
@@ -14,6 +15,7 @@ import javax.swing.JTextField;
 import javax.swing.JLabel;
 import javax.swing.ImageIcon;
 import java.awt.Toolkit;
+import javax.swing.SwingConstants;
 
 @SuppressWarnings("serial")
 public class SimplePresentationScreen extends JFrame {
@@ -121,8 +123,10 @@ public class SimplePresentationScreen extends JFrame {
 		
 		//Add image
 		lblImage = new JLabel("");
-		lblImage.setIcon(new ImageIcon(SimplePresentationScreen.class.getResource("/images/imagen.jpg")));
-		lblImage.setBounds(439, 26, 157, 154);
+		lblImage.setHorizontalAlignment(SwingConstants.CENTER);
+		Image img = new ImageIcon(this.getClass().getResource(studentData.getPathPhoto())).getImage();
+		lblImage.setIcon(new ImageIcon(img.getScaledInstance(255, 155,  java.awt.Image.SCALE_SMOOTH)));
+		lblImage.setBounds(440, 26, 154, 150);
 		contentPane.add(lblImage);
 	
 	}
