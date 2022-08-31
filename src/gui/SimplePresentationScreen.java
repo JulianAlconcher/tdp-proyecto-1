@@ -125,7 +125,7 @@ public class SimplePresentationScreen extends JFrame {
 		lblImage = new JLabel("");
 		lblImage.setHorizontalAlignment(SwingConstants.CENTER);
 		Image img = new ImageIcon(this.getClass().getResource(studentData.getPathPhoto())).getImage();
-		lblImage.setIcon(new ImageIcon(img.getScaledInstance(255, 155,  java.awt.Image.SCALE_SMOOTH)));
+		lblImage.setIcon(new ImageIcon(img.getScaledInstance(275, 155,  java.awt.Image.SCALE_SMOOTH)));
 		lblImage.setBounds(440, 26, 154, 150);
 		contentPane.add(lblImage);
 	
